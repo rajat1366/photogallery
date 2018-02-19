@@ -11,18 +11,10 @@
 |
 */
 
-
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-Route::group(['middleware' => 'web'], function(){
-	Route::auth();
+	
+	Auth::routes();
+	
+	Route::get('/home', 'HomeController@index');
 	Route::get('/', 'GalleryController@index');
 
 	Route::resource('gallery','GalleryController');
@@ -32,5 +24,5 @@ Route::group(['middleware' => 'web'], function(){
 	Route::get('/gallery/show/{id}', 'GalleryController@show');
 	Route::get('/photo/create/{id}', 'PhotoController@create');
 	Route::get('/photo/details/{id}', 'PhotoController@details');
+	
 	Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-});
