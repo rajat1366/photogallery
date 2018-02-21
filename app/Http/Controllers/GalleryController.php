@@ -32,7 +32,7 @@ class GalleryController extends Controller
         $name = $request->input('name');
         $description = $request->input('description');
         $cover_image = $request->file('cover_image');
-        $owner_id = 1;
+        $owner_id = Auth::user()->id;
 
         //Check Image uploaded
         if($cover_image){

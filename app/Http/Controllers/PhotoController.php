@@ -26,7 +26,7 @@ class PhotoController extends Controller
         $description = $request->input('description');
         $location = $request->input('location');
         $image = $request->file('image');
-        $owner_id = 1;
+        $owner_id = Auth::user()->id;
 
         //Check Image uploaded
         if($image){
