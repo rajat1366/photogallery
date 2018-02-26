@@ -7,6 +7,7 @@
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="/photogallery/public/css/foundation.css">
     <link rel="stylesheet" href="/photogallery/public/css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   </head>
   <body>
         

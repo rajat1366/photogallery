@@ -29,6 +29,11 @@ class GalleryController extends Controller
     //store gallery
     public function store(Request $request){
         //Get request Input
+        $request->validate([
+            'name' => 'bail|required|unique:galleries|max:255',
+            'description' => 'required',
+        ]);
+
         $name = $request->input('name');
         $description = $request->input('description');
         $cover_image = $request->file('cover_image');
